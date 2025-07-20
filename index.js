@@ -12,7 +12,6 @@ const run = async () => {
     logger("Check Initiated")
 
     const ip = await getPublicIp()
-    console.log(ip)
 
     if (!ip || !ipv4Regex.test(ip)) {
         logger("Failed to find a valid IP.", true)

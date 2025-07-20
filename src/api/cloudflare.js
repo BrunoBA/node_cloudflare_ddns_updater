@@ -23,11 +23,6 @@ const getAuthHeaders = () => {
 export const getDnsRecord = async () => {
     const apiUrl = `https://api.cloudflare.com/client/v4/zones/${config.zoneIdentifier}/dns_records?type=A&name=${config.recordName}`;
     const headers = getAuthHeaders();
-    console.log(headers);
-    
-
-    console.log(apiUrl);
-    
 
     try {
         const response = await axios.get(apiUrl, { headers });
